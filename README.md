@@ -2,7 +2,7 @@
 Super Mario is one of the best-selling games of all time, with more than 50 million copies sold worldwide. Our goal will be to produce a similar version 'Ace Mario' of it where the player controls Mario's movements. Mario has to race through hardships in form of obstacles and reach the mushroom kingdom which signifies victory.
 
 
-![alt text] (https://github.com/spurithareddy/MarioArcadeGame/blob/main/WhatsApp%20Image%202022-11-08%20at%2015.27.58.jpeg)
+![alt text](https://github.com/spurithareddy/MarioArcadeGame/blob/main/WhatsApp%20Image%202022-11-08%20at%2015.27.58.jpeg)
 ## Objectives & Introduction 
 
 The main objective of this project was to create a Mario video game displayed on an RGB LED matrix. We used two SJ2 boards. One for graphics processing and, the other SJ2 board was used as a gamepad controller, which controller the graphics board and sends data to the LED matrix board.
