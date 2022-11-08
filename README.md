@@ -1,12 +1,7 @@
-[[File:Super mario.JPG|right|450px|thumb|Traditional Mario Game]]
-[[File:13.jpg|right|450px|thumb|Ace Mario Game]]
-
-
-
-== Abstract ==
+## Abstract 
 Super Mario is one of the best-selling games of all time, with more than 50 million copies sold worldwide. Our goal will be to produce a similar version 'Ace Mario' of it where the player controls Mario's movements. Mario has to race through hardships in form of obstacles and reach the mushroom kingdom which signifies victory.
 
-=== Objectives & Introduction ===
+## Objectives & Introduction 
 
 The main objective of this project was to create a Mario video game displayed on an RGB LED matrix. We used two SJ2 boards. One for graphics processing and, the other SJ2 board was used as a gamepad controller, which controller the graphics board and sends data to the LED matrix board.
 Other objectives are as follows:
@@ -36,318 +31,9 @@ The goal of the game is to descend forward in the right direction avoiding obsta
 *Having understood above, it's time to unleash the Ace Mario game now. Good Luck!
 ----
 
-=== Team Members & Responsibilities ===
-{| class="wikitable"
-|-
-! scope="col" style="background:#588ecc;"|<span style="color:#FFFFFF"> <font size=3> '''Name''' </font></span>
-! scope="col" style="background:#588ecc;"|<span style="color:#FFFFFF"> <font size=3>  '''Roles / Responsibilities'''</font></span>
-|-
-! scope="row"|  
-[https://www.linkedin.com/in/tapkirvivek/ Vivek Tapkir]
-|
+## Design & Implementation 
 
-*Game Logic Development
-*Collision Detection
-*Game state handling
-*LED Matrix Driver
-*Game animation implementation
-*Software and Hardware Integration
-*Bug fixes and performance improvement
-|-
-! scope="row"|
-[https://www.linkedin.com/in/shreevats-gadhikar-56b523149/ Shreevats Gadhikar]
-|
-*Game Logic Development
-*Bluetooth and Joystick Driver
-*Hardware Integration
-*PCB Design
-|-
-! scope="row"| [https://www.linkedin.com/in/dayamodekar24/ Daya Modekar]
-|
-*MP3 Decoder Driver
-*Game Logic Development
-*Graphics Driver
-*Hardware Integration
-|}
-
-== Schedule ==
-
-{| class="wikitable"
-|-
-! scope="col"| Week#
-! scope="col"| Start Date
-! scope="col"| End Date
-! scope="col"| Task
-! scope="col"| Status
-|-
-! scope="row"| 1
-|
-* 10/15/2021
-|
-* 10/25/2021
-|
-* Read previous projects, gather information and discuss among the group members.
-* Decide on 2 game ideas and submit Project Proposal assignment
-* Discussion on using wireless or wired controllers,3D printing options,PCB softwares and manufacturer.
-* Finalize parts list
-* Create GitLab repository for project
-* Decide on day/time for weekly meetings
-|
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-
-|-
-! scope="row"| 2
-|
-*10/25/2021  
-|
-*11/03/2021
-|
-*Choose game based on Preet's Project Proposal feedback
-*Finish schedule rough draft and upload to Wiki report
-*Order project parts
-*Break project up into tasks and assign project tasks to team members
-*Obtain datasheets for all parts and upload to team Google Drive folder
-*Brainstorm gameplay, rules, and level design on paper
-|
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-
-|-
-! scope="row"| 3
-|
-* 11/04/2020
-|
-* 11/08/2020
-|
-* Read and familiarize with LED Matrix Datasheet
-* Read datasheets and conduct research for driver writing
-* Finalize wiki schedule
-* Test all parts to ensure proper functionality
-* LED matrix can light a pixel(s) at specified locations.
-* Finalize gameplay, rules, and level design on paper
-* Start Developing graphics driver for LED matrix and implement initial game objects
-* Begin developing MP3 decoder board driver
-* Begin designing PCB in EasyEDA software
-|
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-|-
-! scope="row"| 4
-|
-*11/09/2021
-|
-*11/15/2021
-|
-
-* Begin developing Bluetooth board driver
-* LED matrix can display our game character and obstacles
-* MP3 decoder can play/pause, jump to next/previous song, and increase/decrease volume
-* Bluetooth modules can send controls data back and forth between gamepad board and master board
-* Controls data can be accessed using "get" and "set" API
-* Gamepad controller can read joystick and accelerometer values and detect switch presses
-* Decide how to handle each collision detection case (character/enemy, obstacles/enemy, etc.)
-* Finish enclosure design in AutoCAD software and start printing
-* Finalize PCB design on paper and design in PCB software
-* LED matrix displays character orientation correctly depending on current movement direction
-* Controller input (joystick or accelerometer) option is implemented on a gamepad controller
-* Finalize PCB design in software and order PCB
-|
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-|-
-! scope="row"| 5
-|
-*11/16/2021
-|
-*11/22/2021
-|
-*LED matrix menu screens and game over/victory screens are implemented on matrix
-*Volume controls and controller input select in the options menu are implemented
-*Integrate circuitry with 3D printed enclosure
-*PCB arrives, conduct PCB testing to ensure proper connections
-*Solder PCB and integrate with existing project circuitry
-*LED matrix can scroll to next screen when the character reaches the bottom of the current screen
-*Finalize MP3 track selection for each screen and during gameplay
-*Collision detection logic is fully functional and displays correctly on the LED matrix
-* Testing and debugging the game logic
-|
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-|-
-! scope="row"| 6
-|
-* 11/23/2021
-
-|
-* 11/29/2021
-|
-* Integrate game logic code with LED matrix
-* Write gameplay logic code on the master controller. Gameplay logic should update the score and status bar items correctly
-* LED matrix graphics design for all levels is complete
-* MP3 decoder plays correct song/track during gameplay and for each menu/game over screen
-* Integrate game sounds with game logic
-|
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-|-
-! scope="row"| 7
-|
-* 11/30/2021
-|
-* 12/06/2021
-|
-* Sub-system Integration
-* Finish rough draft of project report
-* Finalizing the video game
-|
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-|-
-! scope="row"| 8
-|
-* 12/07/2021
-|
-* 12/13/2021
-|
-* Address bugs during testing of an integrated system
-* Test pause/play functionality
-|
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-
-|-
-! scope="row"| 9
-|
-*12/14/2021
-|
-*12/16/2020
-|
-*Final Demo
-*Update Gitlab repo with final code.
-*Finalize project report and submit
-|
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-* <span style="color:green">Completed</span>
-|-
-|}
-
-<HR>
-<BR/>
-
-== Parts List & Cost ==
-=== General Parts ===
-{| class="wikitable"
-|-
-! scope="col"| Item #
-! scope="col"| Part
-! scope="col"| Vendor
-! scope="col"| Qty
-! scope="col"| Cost
-|-
-! scope="row"| 1
-| 64x64 RGB LED Matrix
-| [https://www.adafruit.com/product/3649 Adafruit]
-| 1
-| $54.95
-|-
-! scope="row"| 2
-| SJ-2 Boards
-| [https://www.amazon.com/Generic-SJTwo-SJ2-SJSU/dp/B08G9LRPZ8/ref=sr_1_4?dchild=1&keywords=sjsu+sj2+board&qid=1603064585&sr=8-4 SJSU]
-| 2
-| $100.00
-|-
-! scope="row"| 3
-| HC-05 Bluetooth Boards
-| [https://www.amazon.com/DSD-TECH-HC-05-Pass-through-Communication/dp/B01G9KSAF6/ref=sr_1_4?crid=1MTXACDA8RETK&keywords=hc-05&qid=1638426167&s=electronics&sprefix=HC-%2Celectronics%2C229&sr=1-4 Amazon]
-| 2
-| $20.00
-|-
-! scope="row"| 4
-| MP3 Decoder/Player Board
-| [https://www.amazon.com/HiLetgo-YX5300-Control-Serial-Arduino/dp/B0725RHR4D/ref=pd_sbs_1/140-3882465-6958023?pd_rd_w=zUdnA&pf_rd_p=690958f6-2825-419e-9c16-73ffd4055b65&pf_rd_r=6BQ384Y1GEKJ2HZQY723&pd_rd_r=61e015e0-d89a-47c1-9eaa-9a99f656ae36&pd_rd_wg=TuDjr&pd_rd_i=B0725RHR4D&psc=1 Amazon]
-| 1
-| $6.99
-|-
-! scope="row"| 5
-| Joystick
-| [https://www.amazon.com/HiLetgo-Controller-JoyStick-Breakout-Arduino/dp/B00P7QBGD2/ref=sr_1_1?keywords=Hiletgo+joystick&qid=1638426386&sr=8-1 Amazon]
-| 1
-| $4.89
-|-
-! scope="row"| 6
-| Power Supply for LED Matrix (5V 5A)
-| [https://www.amazon.com/ZOZO-Regulated-Switching-Replacement-Electronics/dp/B015PXUHYA/ref=sr_1_6?crid=1EJ10CN64YWS3&keywords=power+adapter&qid=1638426501&sprefix=power+adapt%2Caps%2C254&sr=8-6 Amazon]
-| 1
-| $15.99
-|-
-! scope="row"| 7
-| JBL Speakers
-| already had
-| 1
-| $0
-|-
-! scope="row"| 8
-| Audio Jack Cable
-| already had
-| 1
-| $0
-|-
-! scope="row"| 9
-| MicroSD Card & Adapter
-| already had
-| 1
-| $0
-|-
-! scope="row"| 10
-| Vibration Sensor
-| [https://www.amazon.com/dp/B07PVC7D5T/ref=cm_sw_r_apan_glt_fabc_P6A00CDDJ84Y6CBBSGG0 Amazon]
-| 1
-| $10.99
-|-
-|}
-
-== Design & Implementation ==
-
-=== Hardware Integration Design ===
+### Hardware Integration Design 
 
 For our project, we choose EasyEDA online software for designing the PCB. EasyEDA is completely free to use and all the footprints are easily available online. Also, EasyEDA has a feature of auto-routing which is very useful. The most important thing about EasyEDA is its ability to create a PCB from schematics.
 
@@ -369,7 +55,7 @@ For our project, we choose EasyEDA online software for designing the PCB. EasyED
 
 We checked our schematics several times. We also manually checked the footprints for each part before ordering the PCB. We were succeeded in 1st attempt.
 
-=== Fabrication ===
+### Fabrication 
 
 Using the EasyEDA we designed a 2 layer PCB. PCB was sent to fabrication to JLCPCB China which provided PCB within 7 days with MOQ of 5. The dimension of the 1st PCB was 8.5cm * 8 cm while the other was with the dimension of 16cm * 11.5cm. All the components were mounted as close to each other as possible to minimize the PCB dimensions.
 
@@ -396,7 +82,7 @@ Vias: 20 <br/>
 
 ----
 
-=== Game work Flow Diagram : ===
+### Game work Flow Diagram :
 Game logic gets triggered whenever a user selects the switch button on Joystick. The whole game flow is bounded by two essential conditions which are available time span and Lives. The user is supposed to finish the victory path by avoiding all the hurdles in his path.
 
 [[File:Mario Game flow.png|300px|thumb|center|Mario Game FlowChart]]
@@ -460,18 +146,18 @@ Other tasks are of low priority which deals with various functionalities such as
 
 ----
 
-=== MP3 Decoder ===
+### MP3 Decoder
 The MP3 player device which is based on a high-quality MP3 audio chip -YX5300 is used in our project to play different soundtracks based on the current state of the game such as jump, victory, game over and Mario run states. Our master controller unit (sjtwo-c board) controls MP3 playback state by sending commands to serial MP3 via UART port
 
 [[File:MP3_module.JPG|300px|thumb|center|Serial MP3 Module]]
-==== Hardware Design ====
+#### Hardware Design 
 The MCU controls the device playback by sending serial commands through a TTL level UART control interface (GND, VCC, TX, RX). Sound is output through a headphone jack to headphones or an external amplifier. The board has a playback indicator led that blinks during playback and is steady otherwise. The TF card socket on the PCB reverse is for plugging in the micro SD card with mp3/wav files. The micro SD card should be formatted as fat16 or fat32 and songs must be prefixed with a unique 3 digit index number (for example, 001xxx.mp3, 002xxx.mp3, 003xxx.mp3, etc, where xxx is an arbitrary optional name). The baud rate required for communication is 9600 bps. This decoder also contains an audio jack to connect headphones or speakers.
 {| style="margin-left: auto; margin-right: auto; border: none;"
 |[[File:Hw_design.JPG|500px|thumb|center|MP3 Hardware Interface]]
 |[[File:Mp3_hw_map.JPG|500px|thumb|center|Hardware Support]]
 |}
 
-==== Software Design ====
+### Software Design 
 
 The SJ2 board initializes UART for communicating to the MP3 decoder and allocates memory to load packet information before sending via TX line.Different song tracks were played depending on the game state for example victory song when the players wins, super Mario theme song else where.
 
@@ -518,7 +204,8 @@ void mp3_decoder__play_song_at_index(uint8_t index) {
 }
 </pre>
 
-=== Bluetooth Interface ===
+
+### Bluetooth Interface 
 
 For this project, we used two HC-05 Bluetooth modules. One Bluetooth was configured on the LED matrix controller board while the other was configured on the gamepad controller. The Bluetooth configured on the led matrix controller worked as a slave, only receives commands, while the one configured on the gamepad worked as master, sending controls to the other controller. The master Bluetooth connected to the gamepad controller transmitted the joystick direction. The transmitted direction was in the form of x and y coordinates. The UP and FORWARD direction was calibrated using the x and y coordinates. So along with UP and FORWARD direction, the joystick switch button data was also transmitted using Bluetooth.
 
@@ -528,14 +215,14 @@ We selected the HC-05 Bluetooth module to transmit data over other modules becau
 [[File:Bluetooth-HC 05.jpg|300px|thumb|center|HC-05 Bluetooth Module]]
 
 
-==== Hardware Design ====
+#### Hardware Design 
 
 The HC-05 Bluetooth module was connected to both boards using the SJ2 pins. The pins used were P0.0 and P0.1. These Bluetooth modules communicate with each other over the UART interface. The gamepad controller board process the joystick signals to UP and FORWARD and also the button press and then sends them to the Bluetooth module via UART.
 
 
 [[File:Bluetooth SJ2.jpg|500px|thumb|center|HC-05 Bluetooth Module to SJ2 Connections]]
 
-==== Software Design ====
+#### Software Design 
 
 The following function "receive_from_bluetooth" was used to receive data from the Bluetooth.
  
@@ -569,14 +256,14 @@ The following code snippet was used to process the received data. It simply comp
   }
  }
 
-=== Game pad Controller ===
+### Game pad Controller 
 
 Gamepad Controller basically consists of only three main components. Firstly the joystick, which is used to get the UP and FORWARD direction, and also the press button. Second is the Bluetooth module which is used to transmit the data via UART to the other board. And lastly, the vibration sensor to produce the vibration. The vibration sensor is used to get the real game feel.
 
 
 [[File:Game pad controller.jpeg|400px|thumb|center|Game Pad Controller]]
 
-=== Joystick ===
+### Joystick 
 
 The joystick was interfaced on the Game-pad controller. We used a joystick to get a UP and FORWARD direction. The joystick was configured using ADC pins of the SJ2 board. The Joystick provides an analog output, therefore they were connected to ADC pins to get the digital values. The values of the X-axis and Y-axis varied from 0 to 4095. The center was 2048 for both X-axis and Y-axis. The UP and FORWARD direction was calculated using these ADC values. The joystick also had a digital switch. This digit switch was used as a press button in our game. These three contents (i.e UP, FORWARD, Button_press) were transmitted to the led board using Bluetooth.
 
@@ -584,7 +271,7 @@ The joystick was interfaced on the Game-pad controller. We used a joystick to ge
 [[File:Joystick-module.jpg|300px|thumb|center|Joystick Module]]
 
 
-==== Hardware Design ====
+#### Hardware Design 
 
 
 The hardware design was pretty simple. The two analog output pins i.e X-axis and Y-axis were connected to ADC pins of the SJ2 board. The ADC pins used were P1.30 and P1.31 to get the UP direction and the FORWARD direction. The digital switch was connected to one of the gpio pins on the SJ2 board. This gpio pin was read to detect if the switch was pressed.
@@ -593,7 +280,7 @@ The hardware design was pretty simple. The two analog output pins i.e X-axis and
 [[File:Joystick schematics.jpg|400px|thumb|center|Joystick Schematics]]
 
 
-==== Software Design ====
+#### Software Design 
 
 This code snippet below demonstrates how we calculated the direction using the joystick. The joystick provides the analog values, so we used the ADC pins of the SJ2 board to get the digital values. The values range from 0 to 4095. According to these values threshold for UP and FORWARD/RIGHT were set.
 
@@ -615,7 +302,7 @@ This code snippet below demonstrates how we calculated the direction using the j
   return joysticks_direction;
  }
 
-=== Vibration Module ===
+### Vibration Module 
 
 A vibration module was used to produce the vibration on the game-pad controller to get the real feel of the game. The vibration module was triggered on the Mario jump state and also when Mario died.
 
@@ -623,7 +310,7 @@ A vibration module was used to produce the vibration on the game-pad controller 
 [[File:Vibration sensor.jpg|300px|thumb|center|Vibration module]]
 
 
-==== Hardware Design ====
+#### Hardware Design 
 
 
 Vibration module consists of just 3 pins. VCC for power, Signal pin to trigger the pin, and GND. The signal pin of the vibration module was connected to one of the gpio pin (P0.29) of the SJ2 board.
@@ -632,7 +319,7 @@ Vibration module consists of just 3 pins. VCC for power, Signal pin to trigger t
 [[File:Vibration sensor schematics.jpg|300px|thumb|center|Vibration module schematics]]
 
 
-==== Software Design ====
+#### Software Design 
 
 A GPIO pin was used to signal the SIG pin of the vibration module.
 
@@ -642,14 +329,14 @@ A GPIO pin was used to signal the SIG pin of the vibration module.
   delay__ms(500);
   gpio__reset(vibration_module_pin);
 
-=== Game Graphics Implementation ===
+### Game Graphics Implementation 
 The mtPaint software(open source) is a fantastic resource for planning out levels, background, and designing characters of the game . Images drawn using mtPaint can be converted into 2d-array representation using a python script or other image processing software. This is going to be much easier than writing entire screens out by hand and also saves time.
 {| style="margin-left: auto; margin-right: auto; border: none;"
 |[[File:MtPaint.JPG|500px|thumb|center| mtPaint Window...]]
 |[[File:Python_Script.JPG|500px|thumb|center|Python Scripts]]
 |}
 
-== Project Learnings ==
+## Project Learnings 
 
 
 *Creating various Mario and Background images using MT-paint and Python scripts helped us in achieving better Graphics precision.
@@ -657,35 +344,35 @@ The mtPaint software(open source) is a fantastic resource for planning out level
 *Establishing board to board communication via Bluetooth module and optimizing the response time between the Matrix controller and joystick.
 *Concepts of FreeRTOS , Communication using UART and basic learning helped us .
 
-== Testing & Technical Challenges ==
+## Testing & Technical Challenges 
 
-=== Graphics development ===
+### Graphics development 
 * Creating a motion effect for Mario traversal was a big challenge and the visual effect of  Jump and Walk
 Another trouble was running collision detection when Mario is not moving from his fixed position
 *Came up with a solution of having whole display UI as a single matrix and traversing it as per Jump or forward movement.
 Same position Jump and screen traversal should happen at the same time.
 
-=== MP3 Decoder ===
+### MP3 Decoder 
 
 * The datasheet lacks some information and clarity on module initialization and working. Initially, non of the commands appeared to work or have any effect. The issue was resolved after sending the command to select a device, which was not explicitly stated in the datasheet. Once this command is first sent, the MP3 decoder now begins accepting commands.
 *The TF card folder structure for songs was unclear in the first go.
 
-== Conclusion ==
+## Conclusion 
 Indeed, it was a great learning experience. It sharpened our driver writing skills as we coded each module we used (LED matrix, MP3 decoder, Bluetooth, etc.).We were able to learn a lot about a real-world projects such as FreeRTOS applications, drivers, PCB design, power management circuits, git source code management, and final integration testing. This project allowed us to understand the importance of writing down requirements, planning a schedule for development, and teamwork. Throughout the entire duration of this project, we encountered numerous challenges such as difficulty getting the LED matrix driver up and running, figuring out how to implement collision detection with so many game objects, hardware integration, and writing and maintaining our complex game logic state machine and much more. Despite the challenges and setbacks we faced, we were able to overcome every single one of them in order to build a finished product that we are all proud of.
 
-=== Project Video ===
+### Project Video 
 
 *  [https://www.youtube.com/watch?v=zW5vmb5-Tc4 Demo Video Link]
 
-=== Project Source Code ===
+### Project Source Code 
 
 *  [https://gitlab.com/Shreevats/mario-run Project source code]
 
-=== Acknowledgement ===
+### Acknowledgement 
 
 We'd want to express our gratitude to our professor Preet and all of the ISAs for putting together such a fantastic class and for setting such high standards. This instilled in us the desire to go above and beyond.
 
-=== References Used ===
+### References Used 
 
 ----
 
