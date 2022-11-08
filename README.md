@@ -42,11 +42,9 @@ The goal of the game is to descend forward in the right direction avoiding obsta
 For our project, we choose EasyEDA online software for designing the PCB. EasyEDA is completely free to use and all the footprints are easily available online. Also, EasyEDA has a feature of auto-routing which is very useful. The most important thing about EasyEDA is its ability to create a PCB from schematics.
 
 
+<img  src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/WhatsApp%20Image%202022-11-08%20at%2015.43.35.jpeg" width="495"/> 
 
-[[File:LED Board.png|center|800px|thumb|LED Board PCB Schematic]]
 
-
-[[File:Game pad board.png|center|800px|thumb|Game Board PCB Schematic]]
 
 
 
