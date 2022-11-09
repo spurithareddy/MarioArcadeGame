@@ -73,32 +73,25 @@ Via Drill Diameter: 0.31mm <br/>
 Vias: 20 <br/>
 
 
-{| style="margin-left: auto; margin-right: auto; border: none;"
-|[[File:LED Board PCB.jpeg|center|500px|thumb|LED Board Final PCB]]
-|
-|[[File:Game-pad controller.jpg|center|500px|thumb|Game pad controller]]
-|
-|}
-
-
-
+<img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/Fab.jpeg" width="495">
 ----
 
 ### Game work Flow Diagram :
 Game logic gets triggered whenever a user selects the switch button on Joystick. The whole game flow is bounded by two essential conditions which are available time span and Lives. The user is supposed to finish the victory path by avoiding all the hurdles in his path.
 
-[[File:Mario Game flow.png|300px|thumb|center|Mario Game FlowChart]]
 
-=== Game Task boundry diagram : ===
+<img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/GFW.jpeg" width="495">
+
+#### Game Task boundry diagram : 
 Task creation and managing tasks bandwidth was a crucial part of this project.
 Update display is the core heart of display driver which does refreshing of LED screen matrix at a refresh rate of around 400 Hz.
 Other tasks are of low priority which deals with various functionalities such as managing screen rotation, receiving Bluetooth data.
 
-[[File:Codeflow.drawio.png|500px|thumb|center|Code flow ]]
 
 
+<img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/CF.jpeg" width="495">
 
-[[File:Led matrix pin out.jpg|500px|thumb|center|Pinout for LED Matrix]]
+
 
 
 '''Algorithm:'''
@@ -151,13 +144,13 @@ Other tasks are of low priority which deals with various functionalities such as
 ### MP3 Decoder
 The MP3 player device which is based on a high-quality MP3 audio chip -YX5300 is used in our project to play different soundtracks based on the current state of the game such as jump, victory, game over and Mario run states. Our master controller unit (sjtwo-c board) controls MP3 playback state by sending commands to serial MP3 via UART port
 
-[[File:MP3_module.JPG|300px|thumb|center|Serial MP3 Module]]
+
+<img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/MP3%20Module.jpeg" width="495">
 #### Hardware Design 
 The MCU controls the device playback by sending serial commands through a TTL level UART control interface (GND, VCC, TX, RX). Sound is output through a headphone jack to headphones or an external amplifier. The board has a playback indicator led that blinks during playback and is steady otherwise. The TF card socket on the PCB reverse is for plugging in the micro SD card with mp3/wav files. The micro SD card should be formatted as fat16 or fat32 and songs must be prefixed with a unique 3 digit index number (for example, 001xxx.mp3, 002xxx.mp3, 003xxx.mp3, etc, where xxx is an arbitrary optional name). The baud rate required for communication is 9600 bps. This decoder also contains an audio jack to connect headphones or speakers.
-{| style="margin-left: auto; margin-right: auto; border: none;"
-|[[File:Hw_design.JPG|500px|thumb|center|MP3 Hardware Interface]]
-|[[File:Mp3_hw_map.JPG|500px|thumb|center|Hardware Support]]
-|}
+
+
+<img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/Hardware%20Design.jpeg" width="495">
 
 ### Software Design 
 
@@ -165,7 +158,7 @@ The SJ2 board initializes UART for communicating to the MP3 decoder and allocate
 
 In the project, we wait for an event, such as entering the title screen or game to start playing music.
 
-[[File:MP3_flowchart.JPG|center|250px|thumb|MP3 Decoder flowchart]]
+<img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/Soft%20Design.jpeg" width="495">
 
 Below, are snippets of the code used to set up the commands and send them through UART. Before sending any other command, we must command the decoder to select device 2 (as described in the datasheet). A command we used in our ace Mario project was to play the song at index. The function that sends this command is called mp3_decoder__play_song_at_index(). Within commands, there are two function calls for setting up the packet (set_command_and_data()) and the other for sending the packet over UART (send_command_via_uart()) as shown below
 
@@ -213,8 +206,7 @@ For this project, we used two HC-05 Bluetooth modules. One Bluetooth was configu
 
 We selected the HC-05 Bluetooth module to transmit data over other modules because of their ease to configure, they are extremely reliable and also easy to set up. Both the Bluetooth modules were configured using AT commands. Using AT commands made our job easy to set one Bluetooth as a master while the other as a slave. The best thing about using AT commands is that we can change the configuration as per our needs. The UART baud rate was set to 38400.
 
-
-[[File:Bluetooth-HC 05.jpg|300px|thumb|center|HC-05 Bluetooth Module]]
+<img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/Bluetooth.jpeg" width="495">
 
 
 #### Hardware Design 
@@ -263,14 +255,13 @@ The following code snippet was used to process the received data. It simply comp
 Gamepad Controller basically consists of only three main components. Firstly the joystick, which is used to get the UP and FORWARD direction, and also the press button. Second is the Bluetooth module which is used to transmit the data via UART to the other board. And lastly, the vibration sensor to produce the vibration. The vibration sensor is used to get the real game feel.
 
 
-[[File:Game pad controller.jpeg|400px|thumb|center|Game Pad Controller]]
+
 
 ### Joystick 
 
 The joystick was interfaced on the Game-pad controller. We used a joystick to get a UP and FORWARD direction. The joystick was configured using ADC pins of the SJ2 board. The Joystick provides an analog output, therefore they were connected to ADC pins to get the digital values. The values of the X-axis and Y-axis varied from 0 to 4095. The center was 2048 for both X-axis and Y-axis. The UP and FORWARD direction was calculated using these ADC values. The joystick also had a digital switch. This digit switch was used as a press button in our game. These three contents (i.e UP, FORWARD, Button_press) were transmitted to the led board using Bluetooth.
 
 
-[[File:Joystick-module.jpg|300px|thumb|center|Joystick Module]]
 
 
 #### Hardware Design 
@@ -278,8 +269,6 @@ The joystick was interfaced on the Game-pad controller. We used a joystick to ge
 
 The hardware design was pretty simple. The two analog output pins i.e X-axis and Y-axis were connected to ADC pins of the SJ2 board. The ADC pins used were P1.30 and P1.31 to get the UP direction and the FORWARD direction. The digital switch was connected to one of the gpio pins on the SJ2 board. This gpio pin was read to detect if the switch was pressed.
 
-
-[[File:Joystick schematics.jpg|400px|thumb|center|Joystick Schematics]]
 
 
 #### Software Design 
@@ -309,7 +298,6 @@ This code snippet below demonstrates how we calculated the direction using the j
 A vibration module was used to produce the vibration on the game-pad controller to get the real feel of the game. The vibration module was triggered on the Mario jump state and also when Mario died.
 
 
-[[File:Vibration sensor.jpg|300px|thumb|center|Vibration module]]
 
 
 #### Hardware Design 
@@ -317,8 +305,6 @@ A vibration module was used to produce the vibration on the game-pad controller 
 
 Vibration module consists of just 3 pins. VCC for power, Signal pin to trigger the pin, and GND. The signal pin of the vibration module was connected to one of the gpio pin (P0.29) of the SJ2 board.
 
-
-[[File:Vibration sensor schematics.jpg|300px|thumb|center|Vibration module schematics]]
 
 
 #### Software Design 
@@ -333,11 +319,11 @@ A GPIO pin was used to signal the SIG pin of the vibration module.
 
 ### Game Graphics Implementation 
 The mtPaint software(open source) is a fantastic resource for planning out levels, background, and designing characters of the game . Images drawn using mtPaint can be converted into 2d-array representation using a python script or other image processing software. This is going to be much easier than writing entire screens out by hand and also saves time.
-{| style="margin-left: auto; margin-right: auto; border: none;"
-|[[File:MtPaint.JPG|500px|thumb|center| mtPaint Window...]]
-|[[File:Python_Script.JPG|500px|thumb|center|Python Scripts]]
-|}
 
+
+
+<img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/Game%20Graphics.jpeg" width="495">
+<img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/Game%20Grahics%202.jpeg" width="495">
 ## Project Learnings 
 
 
