@@ -94,7 +94,7 @@ Other tasks are of low priority which deals with various functionalities such as
 
 
 
-'''Algorithm:'''
+### Algorithm:
 
  MARIO_Game_state: Initially START_GAME
  Display Start screen
@@ -118,35 +118,18 @@ Other tasks are of low priority which deals with various functionalities such as
  && Task tick count < 150 seconds
  && mario_available_lives !=0)
 
- {
-
- Action: Joystick forward command received
- Rotate horizontal graphics matrix by x pixels
- along with walking animation
- Action: Joystick Jump command received
- Rotate horizontal graphics matrix by 2x pixels
- along with walking animation and music
- Collision detection
- If Mario position lies within Pothole
- || If Mario position collides with the Piranha plant
- Mario dying animation and music
- Available lives decremented by 1
- Start game from the beginning
- If traversal pixel coordinate reaches victory coordinate
- MARIO_Game_state = MARIO_VICTORY
- Switch over to Victory Screen UI and victory music
-
- }
+ 
 
 
-----
 
 ### MP3 Decoder
 The MP3 player device which is based on a high-quality MP3 audio chip -YX5300 is used in our project to play different soundtracks based on the current state of the game such as jump, victory, game over and Mario run states. Our master controller unit (sjtwo-c board) controls MP3 playback state by sending commands to serial MP3 via UART port
 
 
 <img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/MP3%20Module.jpeg" width="495">
-#### Hardware Design 
+
+### Hardware Design
+
 The MCU controls the device playback by sending serial commands through a TTL level UART control interface (GND, VCC, TX, RX). Sound is output through a headphone jack to headphones or an external amplifier. The board has a playback indicator led that blinks during playback and is steady otherwise. The TF card socket on the PCB reverse is for plugging in the micro SD card with mp3/wav files. The micro SD card should be formatted as fat16 or fat32 and songs must be prefixed with a unique 3 digit index number (for example, 001xxx.mp3, 002xxx.mp3, 003xxx.mp3, etc, where xxx is an arbitrary optional name). The baud rate required for communication is 9600 bps. This decoder also contains an audio jack to connect headphones or speakers.
 
 
