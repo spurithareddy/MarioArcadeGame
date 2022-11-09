@@ -20,11 +20,11 @@ Other objectives are as follows:
 * Integrate all the modules and develop smooth game logic.
 
 
-'''How to Play ACE MARIO'''
+### How to Play ACE MARIO
 
 The goal of the game is to descend forward in the right direction avoiding obstacles in the form of potholes and piranha plants and reach the Mushroom Kingdom which signifies the victory of the game.
 
-*Using the joystick on the gamepad controller, we can control the movements of our Mario.
+* Using the joystick on the gamepad controller, we can control the movements of our Mario.
 *  a)To start the game press the joystick at the top.
 *  b)Mario can jump when the joystick is pressed in the upward direction and accordingly can ascend forward when pressed towards your right direction.
 *As Mario ascends in the screen, the next background screen keeps appearing and we have to traverse until the game ends or we reach the mushroom kingdom.
@@ -33,7 +33,7 @@ The goal of the game is to descend forward in the right direction avoiding obsta
 *Last few seconds on your time span will be indicated by red battery lines, otherwise it will be green in color and is continuously diminishing the green lines as the game ascend.
 *Failure to avoid obstacles as indicated by the game restart screen reduces your lives one by one. Hence, you will have only 3 chances to stay in the game with the usage of lives. Consequently, once you land on any obstacles and you have no lives left, the game ends.
 *Having understood above, it's time to unleash the Ace Mario game now. Good Luck!
-----
+
 
 ## Design & Implementation 
 
@@ -48,12 +48,6 @@ For our project, we choose EasyEDA online software for designing the PCB. EasyED
 
 
 
-{| style="margin-left: auto; margin-right: auto; border: none;"
-|[[File:LED Schematics.jpg|center|500px|thumb|Game Pad PCB (Front)]]
-|
-|[[File:Game board schematics.jpg|center|500px|thumb|Game Pad PCB (Back)]]
-|
-|}
 
 We checked our schematics several times. We also manually checked the footprints for each part before ordering the PCB. We were succeeded in 1st attempt.
 
@@ -74,7 +68,6 @@ Vias: 20 <br/>
 
 
 <img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/Fab.jpeg" width="495">
-----
 
 ### Game work Flow Diagram :
 Game logic gets triggered whenever a user selects the switch button on Joystick. The whole game flow is bounded by two essential conditions which are available time span and Lives. The user is supposed to finish the victory path by avoiding all the hurdles in his path.
@@ -197,8 +190,6 @@ We selected the HC-05 Bluetooth module to transmit data over other modules becau
 The HC-05 Bluetooth module was connected to both boards using the SJ2 pins. The pins used were P0.0 and P0.1. These Bluetooth modules communicate with each other over the UART interface. The gamepad controller board process the joystick signals to UP and FORWARD and also the button press and then sends them to the Bluetooth module via UART.
 
 
-[[File:Bluetooth SJ2.jpg|500px|thumb|center|HC-05 Bluetooth Module to SJ2 Connections]]
-
 #### Software Design 
 
 The following function "receive_from_bluetooth" was used to receive data from the Bluetooth.
@@ -245,13 +236,9 @@ Gamepad Controller basically consists of only three main components. Firstly the
 The joystick was interfaced on the Game-pad controller. We used a joystick to get a UP and FORWARD direction. The joystick was configured using ADC pins of the SJ2 board. The Joystick provides an analog output, therefore they were connected to ADC pins to get the digital values. The values of the X-axis and Y-axis varied from 0 to 4095. The center was 2048 for both X-axis and Y-axis. The UP and FORWARD direction was calculated using these ADC values. The joystick also had a digital switch. This digit switch was used as a press button in our game. These three contents (i.e UP, FORWARD, Button_press) were transmitted to the led board using Bluetooth.
 
 
-
-
 #### Hardware Design 
 
-
 The hardware design was pretty simple. The two analog output pins i.e X-axis and Y-axis were connected to ADC pins of the SJ2 board. The ADC pins used were P1.30 and P1.31 to get the UP direction and the FORWARD direction. The digital switch was connected to one of the gpio pins on the SJ2 board. This gpio pin was read to detect if the switch was pressed.
-
 
 
 #### Software Design 
@@ -282,7 +269,6 @@ A vibration module was used to produce the vibration on the game-pad controller 
 
 
 
-
 #### Hardware Design 
 
 
@@ -307,6 +293,7 @@ The mtPaint software(open source) is a fantastic resource for planning out level
 
 <img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/Game%20Graphics.jpeg" width="495">
 <img src="https://github.com/spurithareddy/MarioArcadeGame/blob/main/Game%20Grahics%202.jpeg" width="495">
+
 ## Project Learnings 
 
 
@@ -344,8 +331,6 @@ Indeed, it was a great learning experience. It sharpened our driver writing skil
 We'd want to express our gratitude to our professor Preet and all of the ISAs for putting together such a fantastic class and for setting such high standards. This instilled in us the desire to go above and beyond.
 
 ### References Used 
-
-----
 
 LED Matrix
 
