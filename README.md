@@ -324,7 +324,7 @@ Indeed, it was a great learning experience. It sharpened our driver writing skil
 
 ### Project Source Code 
 
-*  [https://gitlab.com/Shreevats/mario-run Project source code]
+*  [https://github.com/spurithareddy/Mario_Arcade_code]
 
 ### Acknowledgement 
 
